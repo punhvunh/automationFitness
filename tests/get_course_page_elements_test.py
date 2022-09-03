@@ -9,9 +9,14 @@ def open_domain(driver):
     return get_course_page
 
 
-class TestMainPageElements:
+class TestGetCoursePageElements:
 
     def test_sees_all_elements_in_get_course_window(self, driver):
         get_course_page = open_domain(driver)
         get_course_page.sees_all_elements_in_get_course_window()
+        time.sleep(5)
+
+    def test_close_get_course_window(self, driver):
+        get_course_page = open_domain(driver)
+        get_course_page.close_get_course_window()
         time.sleep(5)
