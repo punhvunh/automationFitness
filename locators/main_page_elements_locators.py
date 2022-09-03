@@ -20,5 +20,4 @@ class MainPageElementsLocators:
     GET_BUTTON = (By.XPATH, '//div[contains(@class,"row")]//a[contains(@class,"bubbly-button")][text()="Получить"]')
 
     LEAVE_A_REQUEST_BUTTON = (By.XPATH, '(//div[contains(@class,"row")]//a[contains(@class,"bubbly-button")]'
-                            '[text()="Оставить заявку"])[3]')
-
+                                        '[text()="Оставить заявку"])[3]')
