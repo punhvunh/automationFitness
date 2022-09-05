@@ -10,6 +10,8 @@ class GetCoursePage(BasePage):
     def sees_all_elements_in_get_course_window(self):
         self.element_is_visible(self.main_page_locators.GET_BUTTON).click()
         print("\nclicksGetButton:success")
+        # self.go_to_element(self.main_page_locators.LEAVE_A_REQUEST_BUTTON)
+        # print("\ngoToLeaveARequestButton:success")
         self.element_is_visible(self.main_page_locators.LEAVE_A_REQUEST_BUTTON).click()
         print("\nclicksLeaveARequestButton:success")
         self.element_is_visible(self.get_course_page_locators.CLOSE_BUTTON)
@@ -18,8 +20,8 @@ class GetCoursePage(BasePage):
         print("\nseesNextButton:success")
         self.element_is_visible(self.get_course_page_locators.ENTER_YOUR_EMAIL_PLACEHOLDER)
         print("\nseesEnterYourEmailPlaceholder:success")
-        # self.element_is_visible(self.get_course_page_locators.GET_COURSE_WINDOW)
-        # print("\nseesGetCourseWindow:success")
+        self.element_is_visible(self.get_course_page_locators.GET_COURSE_WINDOW)
+        print("\nseesGetCourseWindow:success")
 
     def close_get_course_window(self):
         self.element_is_visible(self.main_page_locators.GET_BUTTON).click()
@@ -28,3 +30,5 @@ class GetCoursePage(BasePage):
         print("\nclicksLeaveARequestButton:success")
         self.element_is_visible(self.get_course_page_locators.CLOSE_BUTTON).click()
         print("\nclicksCloseButton:success")
+        self.element_is_not_visible(self.get_course_page_locators.GET_COURSE_WINDOW)
+        print("\ndoesNotSeeGetCourseWindow:success")
