@@ -5,24 +5,24 @@ class LoginPageElementsLocators:
     DOMAIN_LOGO = (By.XPATH, '//div[contains(@class,"row")]//div[contains(@class,"text-center")]'
                              '//a[contains(.,"miloetelo.ru")]')
 
-    HEADER_LOGIN = (By.XPATH, '//div[contains(@class,"row")]//a[text()="Войти"]')
+    LOGIN_HEADER = (By.XPATH, '//div[contains(@class,"row")]//a[text()="Войти"]')
 
-    PLACEHOLDER_EMAIL = (By.XPATH, '//div[contains(@class,"row")]//div[contains(@class,"input_grop")]'
+    EMAIL_PLACEHOLDER = (By.XPATH, '//div[contains(@class,"row")]//div[contains(@class,"input_grop")]'
                                    '//input[@placeholder="E-mail"]')
 
-    PLACEHOLDER_PASSWORD = (By.XPATH, '//div[contains(@class,"row")]//div[contains(@class,"input_grop")]'
+    PASSWORD_PLACEHOLDER = (By.XPATH, '//div[contains(@class,"row")]//div[contains(@class,"input_grop")]'
                                       '//input[@placeholder="Пароль"]')
 
-    BUTTON_LOG_IN = (By.XPATH, '//div[contains(@class,"row")]//div[contains(@class,"col-12")]//button[text()="Войти"]')
+    LOG_IN_BUTTON = (By.XPATH, '//div[contains(@class,"row")]//div[contains(@class,"col-12")]//button[text()="Войти"]')
 
-    ERROR_UNDER_FIELD_EMAIL = (By.XPATH, '//div[contains(@class,"row")]'
-                                         '//div[contains(@class,"input_grop error ")]//p[text()="*Введите e-mail"]')
+    ENTER_EMAIL_ERROR = (By.XPATH, '//div[contains(@class,"row")]'
+                                   '//div[contains(@class,"input_grop error ")]//p[text()="*Введите e-mail"]')
 
-    ERROR_UNDER_FIELD_PASSWORD = (By.XPATH, '//div[contains(@class,"row")]'
-                                            '//div[contains(@class,"input_grop error")]//p[text()="*Введите пароль"]')
+    ENTER_PASSWORD_ERROR = (By.XPATH, '//div[contains(@class,"row")]'
+                                      '//div[contains(@class,"input_grop error")]//p[text()="*Введите пароль"]')
 
-    GENERAL_ERROR_UNDER_FIELD_PASSWORD = (By.XPATH, '//div[contains(@class,"row")]'
-                                                    '//div[contains(@class,"input_grop error")]'
-                                                    '//p[text()="*Неверный e-mail или пароль"]')
+    WRONG_EMAIL_OR_PASSWORD_ERROR = (By.XPATH, '//div[contains(@class,"row")]'
+                                               '//div[contains(@class,"input_grop error")]'
+                                               '//p[text()="*Неверный e-mail или пароль"]')
 
-    LINK_FORGOT_YOUR_PASSWORD = (By.XPATH, '//div[contains(@class,"row")]//a[text()="Забыли пароль"]')
+    FORGOT_YOUR_PASSWORD_LINK = (By.XPATH, '//div[contains(@class,"row")]//a[text()="Забыли пароль"]')
