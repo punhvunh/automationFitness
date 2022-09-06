@@ -37,9 +37,16 @@ class RestorePasswordPage(BasePage):
         print("\nseesErrorMessagesUnderFieldWithWrongEmail:success")
 
     def sends_new_password_to_correct_email(self):
-        email = "test@test.test"
+        input_email = "test@test.test"
         self.element_is_visible(self.restore_password_page_locators.EMAIL_PLACEHOLDER).send_keys(email)
         self.element_is_visible(self.restore_password_page_locators.SEND_TO_EMAIL_BUTTON).click()
         self.element_is_visible(self.restore_password_page_locators.DISABLED_RESEND_BUTTON)
         self.element_is_visible(self.restore_password_page_locators.SUCCESS_HEADER)
-        print("\n:sendsNewPasswordToCorrectEmail")
+        print("\nsendsNewPasswordToCorrectEmail:success")
+        return input_email
+
+    def get_output_email(self):
+        output_email = self.element_is_present(self.restore_password_page_locators.EMAIL_PLACEHOLDER).get_attribute("value")
+        print("\ngetOutPutEmail:success")
+        return output_email
+

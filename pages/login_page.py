@@ -44,10 +44,17 @@ class LoginPage(BasePage):
 
     def fills_empty_fields_with_wrong_data_and_click_on_button_log_in(self):
         login_info = next(generated_login_data())
-        email = login_info.email
-        password = login_info.password
-        self.element_is_visible(self.login_page_locators.EMAIL_PLACEHOLDER).send_keys(email)
-        self.element_is_visible(self.login_page_locators.PASSWORD_PLACEHOLDER).send_keys(password)
+        input_email = login_info.email
+        input_password = login_info.password
+        self.element_is_visible(self.login_page_locators.EMAIL_PLACEHOLDER).send_keys(input_email)
+        self.element_is_visible(self.login_page_locators.PASSWORD_PLACEHOLDER).send_keys(input_password)
         self.clicks_on_button_log_in()
         self.element_is_visible(self.login_page_locators.WRONG_EMAIL_OR_PASSWORD_ERROR)
         print("fillsEmptyFieldsWithWrongDataAndClickOnButtonLogIn:success")
+        return input_email, input_password
+
+    def get_output_email_and_output_password(self):
+        output_email = self.element_is_present(self.login_page_locators.EMAIL_PLACEHOLDER).get_attribute("value")
+        output_password = self.element_is_present(self.login_page_locators.PASSWORD_PLACEHOLDER).get_attribute("value")
+        print("\ngetOutPutEmailAndOutPutPassword:success")
+        return output_email, output_password

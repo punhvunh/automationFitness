@@ -32,5 +32,7 @@ class TestRestorePasswordPageElements:
     def test_restore_password_page_with_correct_email(self, driver):
         restore_password_page = open_domain(driver)
         restore_password_page.goes_to_restore_password_page()
-        restore_password_page.sends_new_password_to_correct_email()
+        input_email = restore_password_page.sends_new_password_to_correct_email()
+        output_email = restore_password_page.get_output_email()
+        assert input_email == output_email
         time.sleep(5)
