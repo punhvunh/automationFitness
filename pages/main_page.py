@@ -13,18 +13,9 @@ class MainPage(BasePage):
         self.element_is_visible(self.main_page_locators.SUPPORT_BUTTON_LOGIC)
         print("\nseesLogicOfSupportButton:success")
 
-    def sees_name_of_silver_course(self):
+    def sees_cost_and_period_of_silver_course(self):
+        # self.go_to_element(self.main_page_locators.SILVER_COURSE_NAME)
         self.element_is_visible(self.main_page_locators.SILVER_COURSE_NAME)
-        print("\nseesNameOfSilverCourse:success")
-
-    def sees_cost_of_silver_course(self):
         self.element_is_visible(self.main_page_locators.SILVER_COURSE_COST)
-        print("\nseesCostOfSilverCourse:success")
-
-    def sees_period_of_silver_course(self):
-        self.element_is_visible(self.main_page_locators.SILVER_COURSE_COST)
-        print("\nseesPeriodOfSilverCourse:success")
-
-    def go_to_silver_course_name(self):
-        self.go_to_element(self.main_page_locators.SILVER_COURSE_NAME)
-        print("\ngoToSilverCourseName:success")
+        self.element_is_visible(self.main_page_locators.SILVER_COURSE_PERIOD)
+        print("\nseesCostAndPeriodOfSilverCourse:success")

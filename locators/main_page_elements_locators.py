@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 
 
 class MainPageElementsLocators:
+
     URL_TEXT = (By.XPATH, '//div[contains(@class,"row")]//header//div[contains(@class,"box_h1")]'
                           '//a[text()="miloetelo.ru"]')
 

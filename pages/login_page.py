@@ -15,10 +15,11 @@ class LoginPage(BasePage):
         self.element_is_visible(self.login_page_locators.PASSWORD_PLACEHOLDER)
         self.element_is_visible(self.login_page_locators.LOG_IN_BUTTON)
         self.element_is_visible(self.login_page_locators.FORGOT_YOUR_PASSWORD_LINK)
+        print("\nseesLoginPageElements:success")
 
     def clicks_on_button_log_in_at_main_page(self):
         self.element_is_visible(self.main_page_locators.LOG_IN_BUTTON).click()
-        print("\nclickOnButtonLogInAtMainPage:success")
+        print("\nclicksOnButtonLogInAtMainPage:success")
 
     def fills_empty_fields_with_right_data(self):
         email = 'test@test.test'
@@ -31,7 +32,7 @@ class LoginPage(BasePage):
         self.element_is_visible(self.login_page_locators.LOG_IN_BUTTON).click()
         print("clicksOnButtonLogIn:success")
 
-    def does_not_error_messages_under_fields(self):
+    def does_not_see_error_messages_under_fields(self):
         self.element_is_not_visible(self.login_page_locators.ENTER_EMAIL_ERROR)
         self.element_is_not_visible(self.login_page_locators.ENTER_PASSWORD_ERROR)
         print("doesNotSeeErrorMessagesUnderFields:success")

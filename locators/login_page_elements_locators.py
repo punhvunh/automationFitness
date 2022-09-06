@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 
 
 class LoginPageElementsLocators:
+
     DOMAIN_LOGO = (By.XPATH, '//div[contains(@class,"row")]//div[contains(@class,"text-center")]'
                              '//a[contains(.,"miloetelo.ru")]')
 

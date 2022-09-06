@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 
 
 class GetCoursePageElementsLocators:
+
     CLOSE_BUTTON = (By.XPATH, '//div[contains(@class,"modal-content")]//button[contains(@class,"close")]//span')
 
     NEXT_BUTTON = (By.XPATH, '//div[contains(@class,"modal-content")]//button[contains(@class,"bubbly-button")]'

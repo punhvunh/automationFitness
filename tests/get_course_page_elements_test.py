@@ -4,9 +4,9 @@ from pages.get_course_page import GetCoursePage
 
 
 def open_domain(driver):
-    get_course_page = GetCoursePage(driver, 'https://miloetelo.ru')
-    get_course_page.open()
-    return get_course_page
+    main_page = GetCoursePage(driver, 'https://miloetelo.ru')
+    main_page.open()
+    return main_page
 
 
 class TestGetCoursePageElements:
@@ -18,5 +18,5 @@ class TestGetCoursePageElements:
 
     def test_close_get_course_window(self, driver):
         get_course_page = open_domain(driver)
-        get_course_page.close_get_course_window()
+        get_course_page.closes_get_course_window()
         time.sleep(5)

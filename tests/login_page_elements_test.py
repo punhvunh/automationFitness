@@ -4,9 +4,9 @@ from pages.login_page import LoginPage
 
 
 def open_domain(driver):
-    login_page = LoginPage(driver, 'https://miloetelo.ru')
-    login_page.open()
-    return login_page
+    main_page = LoginPage(driver, 'https://miloetelo.ru')
+    main_page.open()
+    return main_page
 
 
 class TestLoginPage:
@@ -27,7 +27,7 @@ class TestLoginPage:
     def test_login_page_with_empty_fields(self, driver):
         login_page = open_domain(driver)
         login_page.clicks_on_button_log_in_at_main_page()
-        login_page.does_not_error_messages_under_fields()
+        login_page.does_not_see_error_messages_under_fields()
         login_page.clicks_on_button_log_in()
         login_page.sees_error_messages_under_fields()
         time.sleep(5)

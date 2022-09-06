@@ -23,9 +23,6 @@ class TestMainPageElements:
 
     def test_sees_cost_and_period_of_silver_course(self, driver):
         main_page = open_domain(driver)
-        # main_page.go_to_silver_course_name()
-        main_page.sees_name_of_silver_course()
-        main_page.sees_cost_of_silver_course()
-        main_page.sees_period_of_silver_course()
+        main_page.sees_cost_and_period_of_silver_course()
         time.sleep(5)
 
