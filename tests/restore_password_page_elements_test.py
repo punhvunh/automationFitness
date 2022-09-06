@@ -34,5 +34,5 @@ class TestRestorePasswordPageElements:
         restore_password_page.goes_to_restore_password_page()
         input_email = restore_password_page.sends_new_password_to_correct_email()
         output_email = restore_password_page.get_output_email()
-        assert input_email == output_email
+        assert input_email == output_email, "the email does not much"
         time.sleep(5)

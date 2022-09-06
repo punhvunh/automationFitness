@@ -37,6 +37,6 @@ class TestLoginPage:
         login_page.clicks_on_button_log_in_at_main_page()
         input_email, input_password = login_page.fills_empty_fields_with_wrong_data_and_click_on_button_log_in()
         output_email, output_password = login_page.get_output_email_and_output_password()
-        assert input_email == output_email
-        assert input_password == output_password
+        assert input_email == output_email, "the email does not much"
+        assert input_password == output_password, "the password does not much"
         time.sleep(5)
