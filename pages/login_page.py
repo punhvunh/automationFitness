@@ -21,7 +21,7 @@ class LoginPage(BasePage):
         self.element_is_visible(self.main_page_locators.LOG_IN_BUTTON).click()
         print("\nclicksOnButtonLogInAtMainPage:success")
 
-    def fills_empty_fields_with_right_data(self):
+    def fills_empty_fields_with_correct_data(self):
         email = 'test@test.test'
         password = '123456'
         self.element_is_visible(self.login_page_locators.EMAIL_PLACEHOLDER).send_keys(email)

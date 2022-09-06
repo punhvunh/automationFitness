@@ -17,10 +17,10 @@ class TestLoginPage:
         login_page.sees_login_page_elements()
         time.sleep(5)
 
-    def test_login_page_with_right_data(self, driver):
+    def test_login_page_with_correct_data(self, driver):
         login_page = open_domain(driver)
         login_page.clicks_on_button_log_in_at_main_page()
-        login_page.fills_empty_fields_with_right_data()
+        login_page.fills_empty_fields_with_correct_data()
         login_page.clicks_on_button_log_in()
         time.sleep(5)
 
