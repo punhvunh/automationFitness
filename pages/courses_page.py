@@ -40,4 +40,4 @@ class CoursesPage(BasePage):
         self.element_is_visible(self.courses_page_locators.WALKING_DESCRIPTION)
         self.element_is_visible(self.courses_page_locators.MEDITATION_DESCRIPTION)
         self.element_is_visible(self.courses_page_locators.FINANCIAL_LITERACY_DESCRIPTION)
-        print("\nseesCoursesPageElements:success")
+        print("\nSees courses page elements: success")

@@ -14,19 +14,19 @@ class RestorePasswordPage(BasePage):
     def goes_to_restore_password_page(self):
         self.element_is_visible(self.main_page_locators.LOG_IN_BUTTON).click()
         self.element_is_visible(self.login_page_locators.FORGOT_YOUR_PASSWORD_LINK).click()
-        print("\ngoToRestorePasswordPage:success")
+        print("\nGoes to restore password page: success")
 
     def sees_restore_password_page_elements(self):
         self.element_is_visible(self.login_page_locators.DOMAIN_LOGO)
         self.element_is_visible(self.restore_password_page_locators.RESTORE_HEADER)
         self.element_is_visible(self.restore_password_page_locators.EMAIL_PLACEHOLDER)
         self.element_is_visible(self.restore_password_page_locators.SEND_TO_EMAIL_BUTTON)
-        print("\nseesRestorePasswordPageElements:success")
+        print("\nSees restore password page elements: success")
 
     def sees_error_messages_under_empty_field(self):
         self.element_is_visible(self.restore_password_page_locators.SEND_TO_EMAIL_BUTTON).click()
         self.element_is_visible(self.restore_password_page_locators.FILL_IN_THIS_FIELD_ERROR)
-        print("\nseesErrorMessagesUnderEmptyField:success")
+        print("\nSees error messages under empty field: success")
 
     def sees_error_messages_under_field_with_wrong_email(self):
         login_info = next(generated_login_data())
@@ -34,7 +34,7 @@ class RestorePasswordPage(BasePage):
         self.element_is_visible(self.restore_password_page_locators.EMAIL_PLACEHOLDER).send_keys(email)
         self.element_is_visible(self.restore_password_page_locators.SEND_TO_EMAIL_BUTTON).click()
         self.element_is_visible(self.restore_password_page_locators.EMAIL_NOT_FOUND_ERROR)
-        print("\nseesErrorMessagesUnderFieldWithWrongEmail:success")
+        print("\nSees error messages under field with wrong email: success")
 
     def sends_new_password_to_correct_email(self):
         input_email = "test@test.test"
@@ -42,11 +42,11 @@ class RestorePasswordPage(BasePage):
         self.element_is_visible(self.restore_password_page_locators.SEND_TO_EMAIL_BUTTON).click()
         self.element_is_visible(self.restore_password_page_locators.DISABLED_RESEND_BUTTON)
         self.element_is_visible(self.restore_password_page_locators.SUCCESS_HEADER)
-        print("\nsendsNewPasswordToCorrectEmail:success")
+        print("\nSends new password to correct email: success")
         return input_email
 
     def get_output_email(self):
         output_email = self.element_is_present(self.restore_password_page_locators.EMAIL_PLACEHOLDER).get_attribute("value")
-        print("\ngetOutPutEmail:success")
+        print("\nGet output email: success")
         return output_email
 

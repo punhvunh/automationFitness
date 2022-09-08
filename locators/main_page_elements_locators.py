@@ -36,7 +36,7 @@ class MainPageElementsLocators:
 
     REQUISITE_FOOTER = (By.XPATH, REQUISITE_FOOTER_XPATH)
 
-    PRIVATE_PRIVACY_LINK = (By.XPATH, '//div[contains(@class,"row")]//div[contains(@class,"foot_link")]'
+    PRIVATE_POLICY_LINK = (By.XPATH, '//div[contains(@class,"row")]//div[contains(@class,"foot_link")]'
                                       '//a[text()="Политика конфиденциальности"]')
 
     OFFER_AGREEMENT_LINK = (By.XPATH, '//div[contains(@class,"row")]//div[contains(@class,"foot_link")]'
