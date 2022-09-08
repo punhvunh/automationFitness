@@ -38,7 +38,7 @@ class RestorePasswordPage(BasePage):
 
     def sends_new_password_to_correct_email(self):
         input_email = "test@test.test"
-        self.element_is_visible(self.restore_password_page_locators.EMAIL_PLACEHOLDER).send_keys(email)
+        self.element_is_visible(self.restore_password_page_locators.EMAIL_PLACEHOLDER).send_keys(input_email)
         self.element_is_visible(self.restore_password_page_locators.SEND_TO_EMAIL_BUTTON).click()
         self.element_is_visible(self.restore_password_page_locators.DISABLED_RESEND_BUTTON)
         self.element_is_visible(self.restore_password_page_locators.SUCCESS_HEADER)

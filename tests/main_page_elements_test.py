@@ -26,3 +26,8 @@ class TestMainPageElements:
         main_page.sees_cost_and_period_of_silver_course()
         time.sleep(5)
 
+    def test_sees_requisites_and_links(self, driver):
+        main_page = open_domain(driver)
+        main_page.sees_requisites_and_links()
+        time.sleep(5)
+

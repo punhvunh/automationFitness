@@ -1,3 +1,4 @@
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait as Wait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -28,5 +29,6 @@ class BasePage:
     def element_is_clickable(self, locator, timeout=5):
         return Wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))
 
-    def go_to_element(self, element):
-        self.driver.execute_script("arguments[0].scrollIntoView();", element)
+    def scroll_to_element(self, element):
+        target = self.driver.find_element(By.XPATH, element)
+        self.driver.execute_script("arguments[0].scrollIntoView();", target)

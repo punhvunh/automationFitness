@@ -10,10 +10,9 @@ class GetCoursePage(BasePage):
     main_page_locators = MainPageElementsLocators()
 
     def sees_all_elements_in_get_course_window(self):
-        self.element_is_visible(self.main_page_locators.GET_BUTTON).click()
-        self.element_is_visible(self.main_page_locators.LEAVE_A_REQUEST_BUTTON)
-        # self.go_to_element(self.main_page_locators.LEAVE_A_REQUEST_BUTTON)
-        # print("\ngoToLeaveARequestButton:success")
+        self.element_is_present(self.main_page_locators.LEAVE_A_REQUEST_BUTTON)
+        self.scroll_to_element(self.main_page_locators.LEAVE_A_REQUEST_BUTTON_XPATH)
+        print("\nscrollToLeaveARequestButton:success")
         self.element_is_visible(self.main_page_locators.LEAVE_A_REQUEST_BUTTON).click()
         self.element_is_visible(self.get_course_page_locators.CLOSE_BUTTON)
         self.element_is_visible(self.get_course_page_locators.NEXT_BUTTON)
@@ -22,9 +21,9 @@ class GetCoursePage(BasePage):
         print("\nseesAllElementsInGetCourseWindow:success")
 
     def closes_get_course_window(self):
-        self.element_is_visible(self.main_page_locators.GET_BUTTON).click()
-        # self.go_to_element(self.main_page_locators.LEAVE_A_REQUEST_BUTTON)
-        # print("\ngoToLeaveARequestButton:success")
+        self.element_is_present(self.main_page_locators.LEAVE_A_REQUEST_BUTTON)
+        self.scroll_to_element(self.main_page_locators.LEAVE_A_REQUEST_BUTTON_XPATH)
+        print("\nscrollToLeaveARequestButton:success")
         self.element_is_visible(self.main_page_locators.LEAVE_A_REQUEST_BUTTON).click()
         self.element_is_visible(self.get_course_page_locators.GET_COURSE_WINDOW)
         self.element_is_visible(self.get_course_page_locators.CLOSE_BUTTON).click()
