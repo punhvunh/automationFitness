@@ -12,4 +12,4 @@ class GetCoursePageElementsLocators:
                                               '//input[@placeholder="Введите ваш email"]')
 
     GET_COURSE_WINDOW = (By.XPATH, '//div[contains(@class,"modal-content")]//div[contains(@class,"modal-body")]' 
-                                   '//h4[contains(.,"Получите фитнес-курса + ПП меню")]')
+                                   '//h4[contains(.,"Получите фитнес-курс + ПП меню")]')

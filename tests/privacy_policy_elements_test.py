@@ -4,9 +4,9 @@ from pages.privacy_policy_page import PrivacyPolicyPage
 
 
 def open_domain(driver):
-    privacy_policy_page = PrivacyPolicyPage(driver, 'https://miloetelo.ru')
-    privacy_policy_page.open()
-    return privacy_policy_page
+    main_page = PrivacyPolicyPage(driver, 'https://miloetelo.ru')
+    main_page.open()
+    return main_page
 
 
 class TestPrivatePolicyPageElements:
