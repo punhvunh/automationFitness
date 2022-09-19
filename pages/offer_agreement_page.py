@@ -16,9 +16,11 @@ class OfferAgreementPage(BasePage):
         self.element_is_visible(self.main_page_locators.OFFER_AGREEMENT_LINK).click()
         self.switch_to_next_tab()
         self.element_is_visible(self.login_page_locators.DOMAIN_LOGO)
+        self.element_is_visible(self.offer_agreement_page_locators.IP_AND_NUMBER_ONE)
         self.element_is_visible(self.offer_agreement_page_locators.OFFER_AGREEMENT_LINK_NUMBER_ONE)
         self.element_is_visible(self.offer_agreement_page_locators.MAIN_DOMAIN_NUMBER_ONE)
         self.element_is_visible(self.offer_agreement_page_locators.MAIN_DOMAIN_NUMBER_TWO)
+        self.element_is_visible(self.offer_agreement_page_locators.IP_AND_NUMBER_TWO)
         self.scroll_to_element(self.offer_agreement_page_locators.OFFER_AGREEMENT_LINK_NUMBER_TWO_XPATH)
         print("Scrolls to offer agreement link nuber two: success")
         self.element_is_visible(self.offer_agreement_page_locators.OFFER_AGREEMENT_LINK_NUMBER_TWO)
@@ -30,4 +32,5 @@ class OfferAgreementPage(BasePage):
         self.scroll_to_element(self.offer_agreement_page_locators.SUPPORT_EMAIL_XPATH)
         print("Scrolls to support email: success")
         self.element_is_visible(self.offer_agreement_page_locators.SUPPORT_EMAIL)
+        self.element_is_visible(self.offer_agreement_page_locators.IP_AND_NUMBER_AND_ADDRESS)
 
